@@ -5,32 +5,43 @@
     <title>Шотландия</title>
 </head>
 <style>
-    body {background-color:#ffffff;
-          margin:auto;
+    body {background-color: #ffffff;
+          margin: auto;
           padding: 10px;
           font-family: sans-serif;}
-    table {border-collapse:collapse}
+          
+    table {border-collapse: collapse}
+    
     #name {background-image: url(images/scotland_village.jpg);
-          background-size:cover;
-          background-repeat:no-repeat;
+          background-size: cover;
+          background-repeat: no-repeat;
           line-height: 1300%;
           font-family: Serif;
           font-size: 40px;
           vertical-align: baseline;} /*эта хирня не работает*/
+          
     p {text-align: justify}
-    .block {float:left;
-            width:47%;
-            height:600px;
+    
+    .block {float: left;
+            width: 47%;
+            height: 600px;
             padding: 10px}
-    .block img {width:400px;
-                height:250px}
-    .left * {float:right;
-             margin-left:auto;
-             margin-right:0;
-             padding:1px}
-    .right * {float:left;
-           margin-right:auto;
-           margin-left: 0}
+            
+    .block p {width: 400px}
+                
+    .block img {width: 400px;height: 250px}
+                
+    .left {float: right;
+           margin-left: auto;
+           margin-right: 0}
+             
+    .right {float: left;
+            margin-right: auto;
+            margin-left: 0}
+              
+    @media all and (max-width: 800px) {.block {float:none}
+                                       .left {float:none}
+                                       .right {float:none}}
 </style>
 <body link=black vlink=black>
 <center>
@@ -49,8 +60,6 @@
     <div class="left">
         <img src="images/scotland_dark.jpg" alt="dark">
         <p>dark</p>        
-    </div>
-    <div class="left">
         <img src="images/scotland_cemetry.jpg" alt="cemetry">
         <p>cemetry</p>        
     </div>
@@ -58,9 +67,7 @@
 <div class="block">
     <div class="right">
         <img src="images/scotland_train.jpg" alt="train">
-        <p>train</p>        
-    </div>
-    <div class="right">
+        <p>train</p>
         <img src="images/scotland_sheep.jpg" alt="sheep">
         <p>sheep</p>        
     </div>
