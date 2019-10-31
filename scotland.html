@@ -11,20 +11,30 @@
           font-family: sans-serif;}
 
     table {background-image: url(images/scotland_village.jpg);
+           background-size: cover;
+           background-repeat: no-repeat;
            border-collapse:collapse}
 
-    #name {background-size: cover;
-          background-repeat: no-repeat;
-          line-height: 1300%;
+    .layer1 a:hover {z-index: 1}
+    
+    .name {line-height: 1300%;
           font-family: Serif;
           font-size: 40px;
           vertical-align: baseline;} /*эта хирня не работает*/
-
+          
+    .layer1 {position: relative;
+             z-index: 3}
+    
+    .layer2 {position: absolute;
+             top: 10px;
+             left: 10px;
+             z-index: 2}
+    
     p {text-align: justify}
 </style>
 <body link=black vlink=black>
 <center>
-<table border=0 width=100%>
+<table class="layer1" border=0 width=100%>
    <tr height= 50px>
      <th> <a href="scotland.html"> <u> Главная </u> </a> </th>
      <th> <a href="history.html"> <u> История </u> </a> </th>
@@ -33,7 +43,18 @@
      <th> <a href="facts.html">  <u> Интересные факты </u> </a> </th>
      <th> <a href="photos.html">  <u> Фото </u> </a> </th>     
    </tr>
-   <tr height= 500px ><th id="name" valign=baseline colspan=6>Шотландия</th></tr>
+   <tr height= 500px ><th class="name" valign=baseline colspan=6>Шотландия</th></tr>
+</table>
+<table class="layer2" border=0 width=100%>
+   <tr height= 50px>
+     <th> <a href="scotland.html"> <u> Home </u> </a> </th>
+     <th> <a href="history.html"> <u> History </u> </a> </th>
+     <th> <a href="culture.html">  <u> Culture </u> </a> </th>
+     <th> <a href="sights.html">  <u> Sights </u> </a> </th>
+     <th> <a href="facts.html">  <u> Interesting facts </u> </a> </th>
+     <th> <a href="photos.html">  <u> Photos </u> </a> </th>     
+   </tr>
+   <tr height= 500px ><th class="name" valign=baseline colspan=6>Шотландия</th></tr>
 </table>
 <p> Шотландия - страна на севере острова Великобритания, которая является частью государства Соединённое Королевство Великобритании и Северной Ирландии. Граничит по суше с Англией и омывается морями Атлантического океана: Северным (на востоке) и Ирландским (на западе). Столицей Шотландии является Эдинбург, а крупнейшим городом - Глазго. Страна имеет потрясающую аутентичную атмосферу, богатые традиции и широкую автономию.</p>
 <abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/map.jpg" alt="Карта Швейцарии" width="50%"></abbr>
