@@ -10,17 +10,36 @@
           padding: 10px;
           font-family: sans-serif;}
           
-    table {border-collapse: collapse}
-    
-    #name {background-image: url(images/scotland_village.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          line-height: 1300%;
-          font-family: Serif;
-          font-size: 40px;
-          vertical-align: baseline;} /*эта хирня не работает*/
+    #menu {display: flex;
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           position: sticky;
+           top: 0;
+           background-color: #edeff1}
+
+    #menu li {float: left;
+              flex-basis: auto;
+              flex-grow: 1}
+
+    a {display: block;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: underline;
+       font-weight: bold}
           
     p {text-align: justify}
+    
+    #main {background-image: url(images/scotland_village.jpg);
+           height: 500px;
+           background-size: cover;
+           background-repeat: no-repeat;
+           border-top: solid;
+           border-color: #edeff1}
+           
+    #main h1 {font-family: Serif;
+              padding: 3em 0;
+              text-align: center}
     
     .block {float: left;
             width: 47%;
@@ -39,23 +58,24 @@
             margin-right: auto;
             margin-left: 0}
               
-    @media all and (max-width: 800px) {.block {float:none}
-                                       .left {float:none}
-                                       .right {float:none}}
+    @media all and (max-width: 840px) {#menu {font-size: 10px}
+                                       .block {float: none}
+                                       .left {float: none}
+                                       .right {float: none}}
 </style>
 <body link=black vlink=black>
 <center>
-<table border=0 width=100%>
-   <tr height= 50px>
-     <th> <a href="scotland.html"> <u> Главная </u> </a> </th>
-     <th> <a href="history.html"> <u> История </u> </a> </th>
-     <th> <a href="culture.html">  <u> Культура </u> </a> </th>
-     <th> <a href="sights.html">  <u> Достопримечательности </u> </a> </th>
-     <th> <a href="facts.html">  <u> Интересные факты </u> </a> </th>
-     <th> <a style="background-color:#cad3dc" href="photos.html">  <u> Фото </u> </a> </th>     
-   </tr>
-   <tr height= 500px ><th id="name" colspan=6>Фото</th></tr>
-</table>
+<ul id="menu">
+        <li> <a href="scotland.html"> Главная </a>
+         <li> <a href="history.html"> История </a>
+         <li> <a href="culture.html">  Культура </a>
+         <li> <a href="sights.html">  Достопримечательности </a>
+         <li> <a href="facts.html">  Интересные факты </a>
+         <li style="background-color:#cad3dc"> <a href="photos.html">  Фото </a>    
+    </ul>
+<div id="main">
+    <h1>Фото</h1>
+</div>
 <div class="block">
     <div class="left">
         <img src="images/scotland_dark.jpg" alt="dark">
