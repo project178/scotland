@@ -10,17 +10,27 @@
           padding: 10px;
           font-family: sans-serif}
     
-    #menu {display: flex;
+    .menu {display: flex;
            list-style-type: none;
            margin: 0;
-           padding: 0;
-           position: sticky;
-           top: 0;
-           background-color: #edeff1}
+           padding: 0}
 
-    #menu li {float: left;
+    .menu li {float: left;
               flex-basis: auto;
-              flex-grow: 1}
+              flex-grow: 1;
+              width: 16%;
+              background-color: #edeff1}
+    
+    #ru {position: sticky;
+         top: 0}
+    
+    
+    #en {position:fixed;
+         top: 0px;
+         left: 10px;
+         right: 10px}
+    
+    #ru li:hover {opacity: 0}
 
     a {display: block;
        text-align: center;
@@ -28,7 +38,9 @@
        text-decoration: underline;
        font-weight: bold}
           
-    p {text-align: justify}
+    p {text-align: justify;
+       width: 88%;
+       text-indent: 40px}
     
     #main {background-image: url(images/scotland_village.jpg);
            height: 500px;
@@ -45,14 +57,22 @@
 </style>
 <body link=black vlink=black>
 <center>
-<ul id="menu">
-        <li> <a href="scotland.html"> Главная </a>
-         <li style="background-color:#cad3dc"> <a href="history.html"> История </a>
-         <li> <a href="culture.html">  Культура </a>
-         <li> <a href="sights.html">  Достопримечательности </a>
-         <li> <a href="facts.html">  Интересные факты </a>
-         <li> <a href="photos.html">  Фото </a>    
-    </ul>
+<ul class = "menu" id="en">
+    <li> <a href="scotland.html"> Home </a></li>
+    <li style="background-color:#cad3dc"> <a href="history.html"> History </a></li>
+    <li> <a href="culture.html">  Culture </a></li>
+    <li> <a href="sights.html">  Sights </a></li>
+    <li> <a href="facts.html">  Interesting facts </a></li>
+    <li> <a href="photos.html">  Photos </a></li>
+</ul>
+<ul class = "menu" id="ru">
+    <li> <a href="scotland.html"> Главная </a></li>
+    <li style="background-color:#cad3dc"> <a href="history.html"> История </a></li>
+    <li> <a href="culture.html">  Культура </a></li>
+    <li> <a href="sights.html">  Что посетить </a></li>
+    <li> <a href="facts.html">  Интересные факты </a></li>
+    <li> <a href="photos.html">  Фото </a></li>
+</ul>
 <div id="main">
     <h1>История</h1>
 </div>

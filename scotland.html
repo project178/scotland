@@ -5,30 +5,49 @@
     <title>Шотландия</title>
 </head>
 <style>
-    body {background-color: #ffffff;
-          margin: auto;
+    body {margin: auto;
           padding: 10px;
           font-family: sans-serif}
     
-    #menu {display: flex;
+    .menu {display: flex;
            list-style-type: none;
            margin: 0;
-           padding: 0;
-           position: sticky;
-           top: 0;
-           background-color: #edeff1}
+           padding: 0}
 
-    #menu li {float: left;
+    .menu li {float: left;
               flex-basis: auto;
-              flex-grow: 1}
+              flex-grow: 1;
+              width: 16%;
+              background-color: #edeff1}
+    
+    #ru {position: sticky;
+         top: 0}
+    
+    
+    #en {position:fixed;
+         top: 0px;
+         left: 10px;
+         right: 10px}
+    
+    #ru li:hover {opacity: 0}
 
+    
     a {display: block;
        text-align: center;
        padding: 14px 16px;
        text-decoration: underline;
        font-weight: bold}
           
-    p {text-align: justify}
+    p {text-align: justify;
+       width: 88%;
+       text-indent: 40px}
+       
+    img {padding:22px;
+         width: 400px;
+         height: 600px;
+         }
+         
+    
     
     #main {background-image: url(images/scotland_village.jpg);
            height: 500px;
@@ -41,23 +60,62 @@
               padding: 3em 0;
               text-align: center}
 
-    @media all and (max-width: 840px) {#menu {font-size: 10px}}
+    @media all and (max-width: 840px) {.menu {font-size: 10px}}
 </style>
 <body link=black vlink=black>
+<script>
+    function changeBackgroundColor()
+        {var colors = document.getElementsByName("color");
+         for (var i = 0; i < colors.length; i++)
+             {if (colors[i].checked)
+                  {document.body.style.backgroundColor = colors[i].value;
+                  }
+             }
+        }
+</script>
+
+<script>
+    var popUpList = $('<form>
+    <p>Выберете цвет фона.</p>
+    <input type="radio" name="color" value="white" checked> Белый<br>
+    <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
+    <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
+    </form>')
+    showPopUpButton.click(function() {popUpList.dialog();});
+</script>
 <center>
-<ul id="menu">
-        <li style="background-color:#cad3dc"> <a href="scotland.html"> Главная </a>
-         <li> <a href="history.html"> История </a>
-         <li> <a href="culture.html">  Культура </a>
-         <li> <a href="sights.html">  Достопримечательности </a>
-         <li> <a href="facts.html">  Интересные факты </a>
-         <li> <a href="photos.html">  Фото </a>    
-    </ul>
+<ul class = "menu" id="en">
+    <li style="background-color:#cad3dc"> <a href="scotland.html"> Home </a></li>
+    <li> <a href="history.html"> History </a></li>
+    <li> <a href="culture.html">  Culture </a></li>
+    <li> <a href="sights.html">  Sights </a></li>
+    <li> <a href="facts.html">  Interesting facts </a></li>
+    <li> <a href="photos.html">  Photos </a></li>
+</ul>
+<ul class = "menu" id="ru">
+    <li style="background-color:#cad3dc"> <a href="scotland.html"> Главная </a></li>
+    <li> <a href="history.html"> История </a></li>
+    <li> <a href="culture.html">  Культура </a></li>
+    <li> <a href="sights.html">  Что посетить </a></li>
+    <li> <a href="facts.html">  Интересные факты </a></li>
+    <li> <a href="photos.html">  Фото </a></li>
+</ul>
 <div id="main">
     <h1>Шотландия</h1>
 </div>
-<p> Шотландия - страна на севере острова Великобритания, которая является частью государства Соединённое Королевство Великобритании и Северной Ирландии. Граничит по суше с Англией и омывается морями Атлантического океана: Северным (на востоке) и Ирландским (на западе). Столицей Шотландии является Эдинбург, а крупнейшим городом - Глазго. Страна имеет потрясающую аутентичную атмосферу, богатые традиции и широкую автономию.</p>
-<abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/map.jpg" alt="Карта Швейцарии" width="50%"></abbr>
+<p> Шотландия - страна на севере острова Великобритания, которая является частью государства Соединённое Королевство Великобритании и Северной Ирландии. Граничит по суше с Англией и омывается морями Атлантического океана: Северным (на востоке) и Ирландским (на западе). Столицей Шотландии является Эдинбург, а крупнейшим городом - Глазго.</p>
+<p>Страна имеет потрясающую аутентичную атмосферу, богатые традиции и широкую автономию. Погостить у Маклауда и Питера Пена, увидеть привидение и лох-несское чудовище и убедиться, что Россия — не самая холодная страна.</p>
+<div style="width:97%">
+<abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/scotland_map.jpg" alt="Карта Шотландии"></abbr>
+<abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/scotland_map2.jpg" alt="Карта Шотландии" ></abbr>
+</div>
 </center>
+<form>
+    <p>Выберете цвет фона.</p>
+    <input type="radio" name="color" value="white" checked> Белый<br>
+    <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
+    <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
+    </form>
+<button onclick="changeBackgroundColor()">Выбрать</button>
 </body>
 </html>
