@@ -44,10 +44,16 @@
        
     img {padding:22px;
          width: 400px;
-         height: 600px;
-         }
+         height: 600px}
          
+    #background {width: 270px;
+                 height: 165px;
+                 border: solid;
+                 }
+                 
+    #background p {text-indent: 40px}
     
+    #background button {margin: 10px}
     
     #main {background-image: url(images/scotland_village.jpg);
            height: 500px;
@@ -75,13 +81,9 @@
 </script>
 
 <script>
-    var popUpList = $('<form>
-    <p>Выберете цвет фона.</p>
-    <input type="radio" name="color" value="white" checked> Белый<br>
-    <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
-    <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
-    </form>')
-    showPopUpButton.click(function() {popUpList.dialog();});
+    function show()
+        {
+        }
 </script>
 <center>
 <ul class = "menu" id="en">
@@ -110,12 +112,14 @@
 <abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/scotland_map2.jpg" alt="Карта Шотландии" ></abbr>
 </div>
 </center>
-<form>
-    <p>Выберете цвет фона.</p>
-    <input type="radio" name="color" value="white" checked> Белый<br>
-    <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
-    <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
+<div id = "background">
+    <form>
+        <p >Выберете цвет фона.</p>
+        <input type="radio" name="color" value="white" checked> Белый<br>
+        <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
+        <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
     </form>
-<button onclick="changeBackgroundColor()">Выбрать</button>
+    <button onclick="changeBackgroundColor()">Выбрать</button>
+</div>
 </body>
 </html>
