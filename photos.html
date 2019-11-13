@@ -24,34 +24,30 @@
     #ru {position: sticky;
          top: 0}
     
-    button {text-decoration: none;
-            outline: none;
-            display: inline-block;
-            width: 140px;
-            height: 45px;
-            line-height: 45px;
-            border-radius: 45px;
-            margin: 10px 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            text-transform: uppercase;
-            text-align: center;
-            letter-spacing: 3px;
-            font-weight: 600;
-            color: #524f4e;
-            background: white;
-            box-shadow: 0 8px 15px rgba(0,0,0,.1);
-            transition: .3s;}
-    
-    button:hover {background: #edeff1;
-                  transform: translateY(-7px)}
-    
     #en {position:fixed;
          top: 0px;
          left: 10px;
          right: 10px}
     
     #ru li:hover {opacity: 0}
+    
+    button {display: inline-block;
+            width: 140px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            margin: 10px 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: #524f4e;
+            box-shadow: 0 8px 15px rgba(0,0,0,.1);
+            transition: .4s;}
+    
+    button:hover {background: #edeff1;
+                  transform: translateY(-7px)}
+    
     a {display: block;
        text-align: center;
        padding: 14px 16px;
@@ -81,8 +77,7 @@
     .block p {width: 400px}
                 
     .block img {width: 400px;
-                height: 250px;
-                opacity: 1.0}
+                height: 250px;opacity:1.0}
                 
     .left {float: right;
            margin-left: auto;
@@ -102,12 +97,12 @@
   function Lighter(){
      var elements = document.getElementsByClassName("img")
      for (var i = 0; i < elements.length; i++)
-         {elements[i].style.opacity = 0.3;}
+         {elements[i].style.opacity = (parseFloat(elements[i].style.opacity) || 1) - 0.1}
      }
   function Darker(){
      var elements = document.getElementsByClassName("img")
      for (var i = 0; i < elements.length; i++)
-         {elements[i].style.opacity = 0.8;}
+         {elements[i].style.opacity = parseFloat(elements[i].style.opacity) + 0.1}
      }
 </script>
 <center>
