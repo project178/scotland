@@ -46,14 +46,50 @@
          width: 400px;
          height: 600px}
          
-    #background {width: 270px;
-                 height: 165px;
+    .background {display: none;
+                 width: 270px;
+                 height: 170px;
                  border: solid;
-                 }
+                 border-width: 1px;
+                 border-radius: 10px;
+                 padding-left: 15px;
+                 position: fixed;
+                 top: 35%;
+                 right: 35%;
+                 background-color: white;
+                 font-size: 11px;
+                 text-transform: uppercase;
+                 letter-spacing: 3px;
+                 font-size: 10px;
+                 font-weight: 600;
+                 color: #524f4e;}
                  
-    #background p {text-indent: 40px}
+    .background label {cursor: pointer}
     
-    #background button {margin: 10px}
+    .background button {border-radius: 20px;
+                        padding: 10px 20px;
+                        font-size: 9px;
+                        margin-top: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-weight: 600;
+                        color: #524f4e;
+                        box-shadow: 0 8px 15px rgba(0,0,0,.1);
+                        transition: .4s;
+                        cursor: pointer}
+
+    .close{display: none;
+           position: fixed;
+           top: 33%;
+           right: 33.2%;
+           width: 20px;
+           height: 20px}
+    
+    .close:hover {transform: translateY(-2px);
+                  cursor: pointer}
     
     #main {background-image: url(images/scotland_village.jpg);
            height: 500px;
@@ -79,10 +115,16 @@
              }
         }
 </script>
-
 <script>
     function show()
-        {
+        {document.getElementsByClassName("close")[0].style.display = "initial";
+        document.getElementsByClassName("background")[0].style.display = "initial"
+        }
+</script>
+<script>
+    function Close()
+        {document.getElementsByClassName("close")[0].style.display = "none";
+        document.getElementsByClassName("background")[0].style.display = "none"
         }
 </script>
 <center>
@@ -112,14 +154,16 @@
 <abbr title = "Координаты: 57.0781021 северной широты, 4.255712 западной долготы"><img src="images/scotland_map2.jpg" alt="Карта Шотландии" ></abbr>
 </div>
 </center>
-<div id = "background">
+<div class = "background">
     <form>
         <p >Выберете цвет фона.</p>
-        <input type="radio" name="color" value="white" checked> Белый<br>
-        <input type="radio" name="color" value="#edeff1"> Светло-серый<br>
-        <input type="radio" name="color" value="#cad3dc"> Темно-серый<br>
+        <label><input type="radio" name="color" value="white" checked> Белый</label><br>
+        <label><input type="radio" name="color" value="#edeff1"> Светло-серый</label><br>
+        <label><input type="radio" name="color" value="#cad3dc"> Темно-серый</label><br>
     </form>
     <button onclick="changeBackgroundColor()">Выбрать</button>
 </div>
+<a onclick="Close()"><img class="close" src="images/close.png"></a>
+<a style="text-align: left" name="x" href="#x" onclick="show()">Изменить цвет фона.</a>
 </body>
 </html>
