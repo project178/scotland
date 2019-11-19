@@ -5,8 +5,7 @@
     <title>Шотландия</title>
 </head>
 <style>
-    body {background-color: #ffffff;
-          margin: auto;
+    body {margin: auto;
           padding: 10px;
           font-family: sans-serif;}
           
@@ -78,7 +77,7 @@
     .block p {width: 400px}
                 
     .block img {width: 400px;
-                height: 250px;opacity:1.0}
+                height: 250px}
                 
     .left {float: right;
            margin-left: auto;
@@ -106,22 +105,29 @@
          {elements[i].style.opacity = parseFloat(elements[i].style.opacity) + 0.1}
      }
 </script>
+<script>
+    function SaveColor(href) {window.open(href + ".html?bgColor=" + document.bgColor.slice(1),"_self")}
+</script>
+<script>
+    let tmp = location.search;
+    document.bgColor = "#" + (tmp.substr(tmp.indexOf("bgColor")+8,7) || "ffffff");    
+</script>
 <center>
 <ul class = "menu" id="en">
-    <li> <a href="scotland.html"> Home </a></li>
-    <li> <a href="history.html"> History </a></li>
-    <li> <a href="culture.html">  Culture </a></li>
-    <li> <a href="sights.html">  Sights </a></li>
-    <li> <a href="facts.html">  Interesting facts </a></li>
-    <li style="background-color:#cad3dc"> <a href="photos.html">  Photos </a></li>
+    <li> <a href="#"> Home </a></li>
+    <li> <a href="#"> History </a></li>
+    <li> <a href="#">  Culture </a></li>
+    <li> <a href="#">  Sights </a></li>
+    <li> <a href="#">  Interesting facts </a></li>
+    <li style="background-color:#cad3dc"> <a href="#">  Photos </a></li>
 </ul>
 <ul class = "menu" id="ru">
-    <li> <a href="scotland.html"> Главная </a></li>
-    <li> <a href="history.html"> История </a></li>
-    <li> <a href="culture.html">  Культура </a></li>
-    <li> <a href="sights.html">  Что посетить </a></li>
-    <li> <a href="facts.html">  Интересные факты </a></li>
-    <li style="background-color:#cad3dc"> <a href="photos.html">  Фото </a></li>
+    <li> <a href="#" onclick="SaveColor('scotland')"> Главная </a></li>
+    <li> <a href="#" onclick="SaveColor('history')"> История </a></li>
+    <li> <a href="#" onclick="SaveColor('culture')">  Культура </a></li>
+    <li> <a href="#" onclick="SaveColor('sights')">  Что посетить </a></li>
+    <li> <a href="#" onclick="SaveColor('facts')">  Интересные факты </a></li>
+    <li style="background-color:#cad3dc"> <a href="#">  Фото </a></li>
 </ul>
 <div id="main">
     <h1>Фото</h1>
@@ -129,17 +135,17 @@
 <div class="block">
     <div class="left">
         <img class="img" src="images/scotland_dark.jpg" alt="dark">
-        <p>dark</p>        
+        <p>замок</p>        
         <img class="img" src="images/scotland_cemetry.jpg" alt="cemetry">
-        <p>cemetry</p>        
+        <p>деревня</p>        
     </div>
 </div>
 <div class="block">
     <div class="right">
         <img class="img" src="images/scotland_train.jpg" alt="train">
-        <p>train</p>
+        <p>железная дорога</p>
         <img class="img" src="images/scotland_sheep.jpg" alt="sheep">
-        <p>sheep</p>        
+        <p>животные</p>        
     </div>
 </div>
     <button onclick="Lighter();">Светлее</button>

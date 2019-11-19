@@ -110,39 +110,45 @@
         {var colors = document.getElementsByName("color");
          for (var i = 0; i < colors.length; i++)
              {if (colors[i].checked)
-                  {document.body.style.backgroundColor = colors[i].value;
+                  {document.bgColor = colors[i].value;
                   }
              }
         }
-</script>
-<script>
+
     function show()
         {document.getElementsByClassName("close")[0].style.display = "initial";
-        document.getElementsByClassName("background")[0].style.display = "initial"
+         document.getElementsByClassName("background")[0].style.display = "initial"
         }
-</script>
-<script>
+
     function Close()
         {document.getElementsByClassName("close")[0].style.display = "none";
-        document.getElementsByClassName("background")[0].style.display = "none"
+         document.getElementsByClassName("background")[0].style.display = "none"
         }
+</script>
+
+<script>
+    function SaveColor(href) {window.open(href + ".html?bgColor=" + document.bgColor.slice(1),"_self")}
+</script>
+<script>
+    let tmp = location.search;
+    document.bgColor = "#" + (tmp.substr(tmp.indexOf("bgColor")+8,7) || "ffffff");    
 </script>
 <center>
 <ul class = "menu" id="en">
-    <li style="background-color:#cad3dc"> <a href="scotland.html"> Home </a></li>
-    <li> <a href="history.html"> History </a></li>
-    <li> <a href="culture.html">  Culture </a></li>
-    <li> <a href="sights.html">  Sights </a></li>
-    <li> <a href="facts.html">  Interesting facts </a></li>
-    <li> <a href="photos.html">  Photos </a></li>
+    <li style="background-color:#cad3dc"> <a href="#"> Home </a></li>
+    <li> <a href="#"> History </a></li>
+    <li> <a href="#">  Culture </a></li>
+    <li> <a href="#">  Sights </a></li>
+    <li> <a href="#">  Interesting facts </a></li>
+    <li> <a href="#">  Photos </a></li>
 </ul>
 <ul class = "menu" id="ru">
-    <li style="background-color:#cad3dc"> <a href="scotland.html"> Главная </a></li>
-    <li> <a href="history.html"> История </a></li>
-    <li> <a href="culture.html">  Культура </a></li>
-    <li> <a href="sights.html">  Что посетить </a></li>
-    <li> <a href="facts.html">  Интересные факты </a></li>
-    <li> <a href="photos.html">  Фото </a></li>
+    <li style="background-color:#cad3dc"> <a href="#"> Главная </a></li>
+    <li> <a href="#" onclick="SaveColor('history')"> История </a></li>
+    <li> <a href="#" onclick="SaveColor('culture')">  Культура </a></li>
+    <li> <a href="#" onclick="SaveColor('sights')">  Что посетить </a></li>
+    <li> <a href="#" onclick="SaveColor('facts')">  Интересные факты </a></li>
+    <li> <a href="#" onclick="SaveColor('photos')">  Фото </a></li>
 </ul>
 <div id="main">
     <h1>Шотландия</h1>
@@ -157,13 +163,13 @@
 <div class = "background">
     <form>
         <p >Выберете цвет фона.</p>
-        <label><input type="radio" name="color" value="white" checked> Белый</label><br>
+        <label><input type="radio" name="color" value="#ffffff" checked> Белый</label><br>
         <label><input type="radio" name="color" value="#edeff1"> Светло-серый</label><br>
         <label><input type="radio" name="color" value="#cad3dc"> Темно-серый</label><br>
     </form>
     <button onclick="changeBackgroundColor()">Выбрать</button>
 </div>
 <a onclick="Close()"><img class="close" src="images/close.png"></a>
-<a style="text-align: left" name="x" href="#x" onclick="show()">Изменить цвет фона.</a>
+<a style="text-align: left; font-weight:initial; font-size:7px" name="x" href="#x" onclick="show()">Изменить цвет фона.</a>
 </body>
 </html>

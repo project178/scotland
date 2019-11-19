@@ -5,7 +5,7 @@
     <title>Шотландия</title>
 </head>
 <style>
-    body {background-color: #ffffff;
+    body {
           margin: auto;
           padding: 10px;
           font-family: sans-serif}
@@ -56,22 +56,32 @@
     @media all and (max-width: 840px) {#menu {font-size: 10px}}
 </style>
 <body link=black vlink=black>
+
+<script>
+    function SaveColor(href) {window.open(href + ".html?bgColor=" + document.bgColor.slice(1),"_self")}
+</script>
+
+<script>
+    let tmp = location.search;
+    document.bgColor = (("#" + tmp.substr(tmp.indexOf("bgColor")+8,7)) || "#ffffff");    
+</script>
+
 <center>
 <ul class = "menu" id="en">
-    <li> <a href="scotland.html"> Home </a></li>
-    <li style="background-color:#cad3dc"> <a href="history.html"> History </a></li>
-    <li> <a href="culture.html">  Culture </a></li>
-    <li> <a href="sights.html">  Sights </a></li>
-    <li> <a href="facts.html">  Interesting facts </a></li>
-    <li> <a href="photos.html">  Photos </a></li>
+    <li> <a href="#"> Home </a></li>
+    <li style="background-color:#cad3dc"> <a href="#"> History </a></li>
+    <li> <a href="#">  Culture </a></li>
+    <li> <a href="#">  Sights </a></li>
+    <li> <a href="#">  Interesting facts </a></li>
+    <li> <a href="#">  Photos </a></li>
 </ul>
 <ul class = "menu" id="ru">
-    <li> <a href="scotland.html"> Главная </a></li>
-    <li style="background-color:#cad3dc"> <a href="history.html"> История </a></li>
-    <li> <a href="culture.html">  Культура </a></li>
-    <li> <a href="sights.html">  Что посетить </a></li>
-    <li> <a href="facts.html">  Интересные факты </a></li>
-    <li> <a href="photos.html">  Фото </a></li>
+    <li> <a href="#" onclick="SaveColor('scotland')"> Главная </a></li>
+    <li style="background-color:#cad3dc"> <a href="#"> История </a></li>
+    <li> <a href="#" onclick="SaveColor('culture')">  Культура </a></li>
+    <li> <a href="#" onclick="SaveColor('sights')">  Что посетить </a></li>
+    <li> <a href="#" onclick="SaveColor('facts')">  Интересные факты </a></li>
+    <li> <a href="#" onclick="SaveColor('photos')">  Фото </a></li>
 </ul>
 <div id="main">
     <h1>История</h1>
