@@ -1,155 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Шотландия</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <style>
-    body {margin: auto;
-          padding: 10px;
-          font-family: sans-serif;}
-          
-    .menu {display: flex;
-           list-style-type: none;
-           margin: 0;
-           padding: 0}
+      img {padding: 0;
+           height: 250px
+          }    
 
-    .menu li {float: left;
-              flex-basis: auto;
-              flex-grow: 1;
-              width: 16%;
-              background-color: #edeff1}
-    
-    #ru {position: sticky;
-         top: 0}
-    
-    #en {position:fixed;
-         top: 0px;
-         left: 10px;
-         right: 10px}
-    
-    #ru li:hover {opacity: 0}
-    
-    button {display: inline-block;
-            width: 140px;
-            height: 45px;
-            line-height: 45px;
-            border-radius: 45px;
-            margin: 10px 20px;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 600;
-            color: #524f4e;
-            box-shadow: 0 8px 15px rgba(0,0,0,.1);
-            transition: .4s;}
-    
-    button:hover {background: #edeff1;
-                  transform: translateY(-7px);
-                  cursor: pointer}
-    
-    a {display: block;
-       text-align: center;
-       padding: 14px 16px;
-       text-decoration: underline;
-       font-weight: bold}
-          
-    p {text-align: justify;
-       width: 88%;
-       text-indent: 40px}
-    
-    #main {background-image: url(images/scotland_village.jpg);
-           height: 500px;
-           background-size: cover;
-           background-repeat: no-repeat;
-           border-top: solid;
-           border-color: #edeff1}
-           
-    #main h1 {font-family: Serif;
-              padding: 3em 0;
-              text-align: center}
-    
+    .button {display: inline-block;
+             padding: 0;
+             width: 140px;
+             height: 45px;
+             line-height: 45px;
+             border-radius: 45px;
+             margin: 10px 20px;
+             font-size: 11px;
+             letter-spacing: 3px;
+            }
+    .button:hover {background: #edeff1;
+                   transform: translateY(-7px)
+                  }
+                  
     .block {float: left;
             width: 47%;
             height: 600px;
-            padding: 10px}
-            
+            padding: 10px
+           }
+
     .block p {width: 400px}
-                
-    .block img {width: 400px;
-                height: 250px}
-                
+
     .left {float: right;
            margin-left: auto;
-           margin-right: 0}
-             
+           margin-right: 0
+          }
+
     .right {float: left;
             margin-right: auto;
-            margin-left: 0}
-              
-    @media all and (max-width: 840px) {#menu {font-size: 10px}
-                                       .block {float: none}
+            margin-left: 0
+           }
+           
+           
+    @media all and (max-width: 840px) {.block {float: none}
                                        .left {float: none}
-                                       .right {float: none}}
+                                       .right {float: none}
+                                      }
 </style>
+
 <body link=black vlink=black>
-<script>
-  function Lighter(){
-     var elements = document.getElementsByClassName("img")
-     for (var i = 0; i < elements.length; i++)
-         {elements[i].style.opacity = (parseFloat(elements[i].style.opacity) || 1) - 0.1}
-     }
-  function Darker(){
-     var elements = document.getElementsByClassName("img")
-     for (var i = 0; i < elements.length; i++)
-         {elements[i].style.opacity = parseFloat(elements[i].style.opacity) + 0.1}
-     }
-</script>
-<script>
-    function SaveColor(href) {window.open(href + ".html?bgColor=" + document.bgColor.slice(1),"_self")}
-</script>
-<script>
-    let tmp = location.search;
-    document.bgColor = "#" + (tmp.substr(tmp.indexOf("bgColor")+8,7) || "ffffff");    
-</script>
-<center>
-<ul class = "menu" id="en">
-    <li> <a href="#"> Home </a></li>
-    <li> <a href="#"> History </a></li>
-    <li> <a href="#">  Culture </a></li>
-    <li> <a href="#">  Sights </a></li>
-    <li> <a href="#">  Interesting facts </a></li>
-    <li style="background-color:#cad3dc"> <a href="#">  Photos </a></li>
-</ul>
-<ul class = "menu" id="ru">
-    <li> <a href="#" onclick="SaveColor('scotland')"> Главная </a></li>
-    <li> <a href="#" onclick="SaveColor('history')"> История </a></li>
-    <li> <a href="#" onclick="SaveColor('culture')">  Культура </a></li>
-    <li> <a href="#" onclick="SaveColor('sights')">  Что посетить </a></li>
-    <li> <a href="#" onclick="SaveColor('facts')">  Интересные факты </a></li>
-    <li style="background-color:#cad3dc"> <a href="#">  Фото </a></li>
-</ul>
-<div id="main">
-    <h1>Фото</h1>
-</div>
-<div class="block">
-    <div class="left">
-        <img class="img" src="images/scotland_dark.jpg" alt="dark">
-        <p>замок</p>        
-        <img class="img" src="images/scotland_cemetry.jpg" alt="cemetry">
-        <p>деревня</p>        
+
+    <script type="text/javascript" src="background.js"></script>
+    <script>
+        function Lighter()
+           {var elements = document.getElementsByClassName("img")
+            for (var i = 0; i < elements.length; i++)
+               {elements[i].style.opacity = (parseFloat(elements[i].style.opacity) || 1) - 0.1}
+           }
+      function Darker()
+         {var elements = document.getElementsByClassName("img")
+          for (var i = 0; i < elements.length; i++)
+             {elements[i].style.opacity = parseFloat(elements[i].style.opacity) + 0.1}
+         }
+    </script>
+    <center>
+        <ul class="menu" id="en">
+            <li> <a href="#"> Home </a></li>
+            <li> <a href="#"> History </a></li>
+            <li> <a href="#"> Culture </a></li>
+            <li> <a href="#"> Sights </a></li>
+            <li> <a href="#"> Interesting facts </a></li>
+            <li style="background-color:#cad3dc"> <a href="#"> Photos </a></li>
+        </ul>
+        <ul class="menu" id="ru">
+            <li> <a href="#" onclick="SaveColor('scotland')"> Главная </a></li>
+            <li> <a href="#" onclick="SaveColor('history')"> История </a></li>
+            <li> <a href="#" onclick="SaveColor('culture')"> Культура </a></li>
+            <li> <a href="#" onclick="SaveColor('sights')"> Что посетить </a></li>
+            <li> <a href="#" onclick="SaveColor('facts')"> Интересные факты </a></li>
+            <li style="background-color:#cad3dc"> <a href="#"> Фото </a></li>
+        </ul>
+        <div id="main">
+            <h1>Фото</h1>
+        </div>
+        <div class="block">
+            <div class="left">
+                <img class="img" src="images/scotland_dark.jpg" alt="dark">
+                <p>замок</p>
+                <img class="img" src="images/scotland_cemetry.jpg" alt="cemetry">
+                <p>деревня</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="right">
+                <img class="img" src="images/scotland_train.jpg" alt="train">
+                <p>железная дорога</p>
+                <img class="img" src="images/scotland_sheep.jpg" alt="sheep">
+                <p>животные</p>
+            </div>
+        </div>
+        <button class="button" onclick="Lighter();">Светлее</button>
+        <button class="button" onclick="Darker();">Темнее</button>
+    </center>
+    <div class="change_background">
+        <form>
+            <p>Выберете цвет фона.</p>
+            <label><input type="radio" name="color" value="#ffffff" checked> Белый</label><br>
+            <label><input type="radio" name="color" value="#edeff1"> Светло-серый</label><br>
+            <label><input type="radio" name="color" value="#cad3dc"> Темно-серый</label><br>
+        </form>
+        <button onclick="changeBackgroundColor()">Выбрать</button>
     </div>
-</div>
-<div class="block">
-    <div class="right">
-        <img class="img" src="images/scotland_train.jpg" alt="train">
-        <p>железная дорога</p>
-        <img class="img" src="images/scotland_sheep.jpg" alt="sheep">
-        <p>животные</p>        
-    </div>
-</div>
-    <button onclick="Lighter();">Светлее</button>
-    <button onclick="Darker();">Темнее</button>
-</center>
+    <a onclick="Close()"><img class="close" src="images/close.png" style="padding:22px"></a>
+    <a id="change_bg" name="x" href="#x" onclick="show()">Изменить цвет фона.</a>
 </body>
+
 </html>

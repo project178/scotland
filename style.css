@@ -1,0 +1,148 @@
+body {margin: auto;
+      padding: 10px;
+      font-family: sans-serif
+     }
+
+
+p {text-align: justify;
+   width: 88%;
+   text-indent: 40px
+  }
+
+
+a {display: block;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: underline;
+   font-weight: bold
+  }
+
+
+img {padding: 22px;
+     width: 400px;
+     height: 600px
+    }
+
+
+table {margin: 0 50px 0 50px;
+       border: 1px #aaa solid;
+       border-collapse: collapse;
+       font-size: 95%;
+       width: 80%;
+       padding: 4;
+       border-spacing: 0
+      }
+
+
+button {border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 9px;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: #524f4e;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+        transition: .4s;
+        cursor: pointer
+       }
+
+
+label {cursor: pointer}
+
+
+.menu {display: flex;
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       z-index: 999
+      }
+
+.menu li {float: left;
+          flex-basis: auto;
+          flex-grow: 1;
+          width: 16%;
+          background-color: #edeff1
+         }
+
+#ru {position: sticky;
+     top: 0
+    }
+
+
+#ru li:hover {opacity: 0
+    }
+
+
+#en {position: fixed;
+     top: 0px;
+     left: 10px;
+     right: 10px
+    }
+    
+
+#main {background-image: url(images/scotland_village.jpg);
+       height: 500px;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       border-top: solid;
+       border-color: #edeff1
+      }
+      
+
+#main h1 {font-family: Serif;
+          padding: 3em 0;
+          text-align: center
+         }
+
+
+#change_bg {position: fixed;
+            bottom: 10px;
+            left: 10px;
+            text-align: left;
+            font-weight: initial;
+            font-size: 7px;
+            opacity: 0
+           }
+
+#change_bg:hover {opacity: 1}
+
+
+.change_background {display: none;
+                    width: 270px;
+                    height: 170px;
+                    border: solid;
+                    border-width: 1px;
+                    border-radius: 10px;
+                    padding-left: 15px;
+                    position: fixed;
+                    top: 35%;
+                    right: 35%;
+                    background-color: white;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: #524f4e;
+                   }
+                   
+
+.close {display: none;
+        position: fixed;
+        top: 33%;
+        right: 33.2%;
+        width: 20px;
+        height: 20px
+       }
+
+.close:hover {transform: translateY(-2px);
+              cursor: pointer
+             }
+
+@media all and (max-width: 840px) {.menu {font-size: 10px}}
+@media all and (min-width: 1100px) {#main h1 {color: #CCD0DB}}
